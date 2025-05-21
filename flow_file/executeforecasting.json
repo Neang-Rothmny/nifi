@@ -19,25 +19,25 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "f22bd540-0196-1000-0c70-d49135cec1ed",
-        "name" : "LogAttribute",
+        "id" : "f22b8583-0196-1000-a95c-f714c313c461",
+        "name" : "Update File Name",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "6d3de21e-39d8-3c2c-9b6c-0e6ec750b2cf",
+      "identifier" : "235f9f00-d78e-3444-b786-e0b4c12b191a",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
       "partitioningAttribute" : "",
       "prioritizers" : [ ],
-      "selectedRelationships" : [ "unmatched" ],
+      "selectedRelationships" : [ "success" ],
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "f22b66a5-0196-1000-986a-1ee41e415c04",
-        "name" : "RouteOnContent",
+        "id" : "f22babcc-0196-1000-cdae-c31677db5604",
+        "name" : "Send Succeed Email",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -50,12 +50,12 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "f22b8583-0196-1000-a95c-f714c313c461",
-        "name" : "UpdateAttribute",
+        "name" : "Update File Name",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "ee1c9fe2-24b0-37bd-a12c-a9c60747de54",
+      "identifier" : "e954d63d-f760-39a7-976d-d5658aaed7f4",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -66,8 +66,8 @@
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "f22aad67-0196-1000-28a7-f443453fa123",
-        "name" : "ExecuteProcess",
+        "id" : "f22bf1cd-0196-1000-92ff-34f6f099412f",
+        "name" : "Send Failed Email",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -80,7 +80,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "f22bf1cd-0196-1000-92ff-34f6f099412f",
-        "name" : "PutEmail",
+        "name" : "Send Failed Email",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -97,7 +97,37 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "f22b66a5-0196-1000-986a-1ee41e415c04",
-        "name" : "RouteOnContent",
+        "name" : "Condition Check",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f22bd540-0196-1000-0c70-d49135cec1ed",
+        "name" : "Check Log if Unmatch",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "eaebc2e7-e3a9-35f1-9c9e-71a196e1b54b",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f22b66a5-0196-1000-986a-1ee41e415c04",
+        "name" : "Condition Check",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -110,7 +140,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "f22b66a5-0196-1000-986a-1ee41e415c04",
-        "name" : "RouteOnContent",
+        "name" : "Condition Check",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -127,7 +157,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "f22aad67-0196-1000-28a7-f443453fa123",
-        "name" : "ExecuteProcess",
+        "name" : "Execute Bash Script",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -140,7 +170,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "f22babcc-0196-1000-cdae-c31677db5604",
-        "name" : "PutEmail",
+        "name" : "Send Succeed Email",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -157,7 +187,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "f22b66a5-0196-1000-986a-1ee41e415c04",
-        "name" : "RouteOnContent",
+        "name" : "Condition Check",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -170,7 +200,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "f22c1f45-0196-1000-c149-c80ded2ee56a",
-        "name" : "PutFile",
+        "name" : "Put Log File",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -187,7 +217,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "f22b8583-0196-1000-a95c-f714c313c461",
-        "name" : "UpdateAttribute",
+        "name" : "Update File Name",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -213,7 +243,7 @@
     },
     "processGroups" : [ ],
     "processors" : [ {
-      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "autoTerminatedRelationships" : [ "failure" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -228,11 +258,11 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "f22babcc-0196-1000-cdae-c31677db5604",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "PutEmail",
+      "name" : "Send Succeed Email",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -904.0,
-        "y" : 512.0
+        "x" : -704.0,
+        "y" : 520.0
       },
       "properties" : {
         "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
@@ -441,11 +471,11 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "f22c1f45-0196-1000-c149-c80ded2ee56a",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "PutFile",
+      "name" : "Put Log File",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 200.0,
-        "y" : 512.0
+        "x" : -456.0,
+        "y" : 1152.0
       },
       "properties" : {
         "Create Missing Directories" : "true",
@@ -535,7 +565,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "f22b66a5-0196-1000-986a-1ee41e415c04",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "RouteOnContent",
+      "name" : "Condition Check",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -457.16678701180626,
@@ -610,11 +640,11 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "f22aad67-0196-1000-28a7-f443453fa123",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "ExecuteProcess",
+      "name" : "Execute Bash Script",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -232.0,
-        "y" : 0.0
+        "x" : -456.0,
+        "y" : 8.0
       },
       "properties" : {
         "Command" : "bash",
@@ -699,11 +729,11 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "f22b8583-0196-1000-a95c-f714c313c461",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "UpdateAttribute",
+      "name" : "Update File Name",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 3.8332129881937362,
-        "y" : 265.83334973852965
+        "x" : -456.0,
+        "y" : 840.0
       },
       "properties" : {
         "filename" : "execute_forecastiing_${now():format('yyyyMMdd_HHmmss')}.log",
@@ -757,7 +787,7 @@
       "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "autoTerminatedRelationships" : [ "failure" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -772,11 +802,11 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "f22bf1cd-0196-1000-92ff-34f6f099412f",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "PutEmail",
+      "name" : "Send Failed Email",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -224.0,
-        "y" : 512.0
+        "x" : -152.0,
+        "y" : 520.0
       },
       "properties" : {
         "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
@@ -985,11 +1015,11 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "f22bd540-0196-1000-0c70-d49135cec1ed",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "LogAttribute",
+      "name" : "Check Log if Unmatch",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -648.0,
-        "y" : 696.0
+        "x" : 224.0,
+        "y" : 256.0
       },
       "properties" : {
         "Log prefix" : "the RouteOnContent Processor in NiFi not matched.",
